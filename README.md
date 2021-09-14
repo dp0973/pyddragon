@@ -1,6 +1,6 @@
 # pyddragon
 
-> Python wrapper library providing LoL ddragon data asynchronously
+> Python wrapper library providing LoL ddragon data asynchronously (On dev)
 
 ## Example Code
 
