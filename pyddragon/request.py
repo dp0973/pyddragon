@@ -1,4 +1,4 @@
-from typing import Any, Literal, Optional
+from typing import Any, Literal, Optional, Union
 from aiohttp import ClientSession
 from types import TracebackType
 
@@ -50,7 +50,7 @@ class DdragonHttpClient:
 
     async def get_base_json(
         self, field: Literal["champion", "item", "runesReforged", "summoner"], lang: str
-    ):
+    ) -> Union[dict, list]:
         return await self.request(
             "GET", f"/cdn/{await self.get_version()}/data/{lang}/{field}.json", "json"
         )
