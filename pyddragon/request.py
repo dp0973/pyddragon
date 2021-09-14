@@ -1,6 +1,6 @@
-from typing import Any, Literal, Optional, Union
 from aiohttp import ClientSession
 from types import TracebackType
+from typing import Any, Literal, Optional, Union
 
 
 class DdragonHttpClient:
