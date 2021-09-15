@@ -1,6 +1,6 @@
 # pyddragon
 <img src="https://img.shields.io/badge/python-v3.9.4-blue"/> [![PyPi version](https://badgen.net/pypi/v/pyddragon/)](https://pypi.com/project/pyddragon) [![PyPi license](https://badgen.net/pypi/license/pyddragon/)](https://pypi.com/project/pyddragon/)  
-Python wrapper library providing LoL ddragon data asynchronously (On dev)
+Python wrapper library providing LoL ddragon data asynchronously
 
 ## Features
 
