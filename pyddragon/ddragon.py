@@ -1,12 +1,17 @@
 from typing import Literal, Optional, Union
 
-from pyddragon.models import Champion, Item
+from aiohttp import ClientSession
+
+from pyddragon.models.champion import Champion
+from pyddragon.models.item import Item
 from pyddragon.request import DdragonHttpClient
 
 
-class Ddragon:
-    def __init__(self, lang: Optional[str] = "en_US") -> None:
-        self.request = DdragonHttpClient()
+class Ddragon(DdragonHttpClient):
+    def __init__(
+        self, lang: str = "en_US", session: Optional[ClientSession] = None
+    ) -> None:
+        super().__init__(session)
         self.lang = lang
         self.ch_loaded = False
         self.it_loaded = False
@@ -19,7 +24,7 @@ class Ddragon:
         self.ch_by_id = {}
         ch_props = ["name", "id", "key", "title", "blurb", "image", "tags"]
 
-        chs_json = await self.request.get_base_json("champion", self.lang)
+        chs_json = await self.get_base_json("champion", self.lang)
         for ch in chs_json["data"]:
             ch_json = chs_json["data"][ch]
 
@@ -53,7 +58,7 @@ class Ddragon:
             "stats",
         ]
 
-        its_json = await self.request.get_base_json("item", self.lang)
+        its_json = await self.get_base_json("item", self.lang)
         for it in its_json["data"]:
             it_json = its_json["data"][it]
 
