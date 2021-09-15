@@ -2,6 +2,12 @@
 
 > Python wrapper library providing LoL ddragon data asynchronously (On dev)
 
+## Installation
+
+```
+pip install pyddragon
+```
+
 ## Example Code
 
 ```py
