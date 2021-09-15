@@ -1,6 +1,12 @@
 # pyddragon
+<img src="https://img.shields.io/badge/python-v3.9.4-blue"/> [![PyPi version](https://badgen.net/pypi/v/pyddragon/)](https://pypi.com/project/pyddragon) [![PyPi license](https://badgen.net/pypi/license/pyddragon/)](https://pypi.com/project/pyddragon/)  
+Python wrapper library providing LoL ddragon data asynchronously (On dev)
 
-> Python wrapper library providing LoL ddragon data asynchronously (On dev)
+## Features
+
+- Asynchronous
+- Support a variety of search type in a method
+- Returns class to get details easily
 
 ## Installation
 
@@ -20,7 +26,7 @@ async def main():
     async with Ddragon() as dd:
         ch_by_name = await dd.get_champion("Aurelion Sol", "name")
         ch_by_id = await dd.get_champion("AurelionSol")
-        ch_by_key = await dd.get_champion(136)
+        ch_by_key = await dd.get_champion(136) # "136" is available
 
         print(f"{ch_by_name.name} - {ch_by_name.id} - {ch_by_name.key}")
         print(f"{ch_by_id.name} - {ch_by_id.id} - {ch_by_id.key}")
