@@ -5,7 +5,7 @@ Python wrapper library providing LoL ddragon data asynchronously
 ## Features
 
 - Asynchronous
-- Support a variety of search type in a method
+- Supports various search types in a method
 - Returns class to get details easily
 
 ## Installation
