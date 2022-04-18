@@ -21,7 +21,7 @@ pip install pyddragon
 
 ## Contact & Suggestion
 
-**Just open a pull request or issue freely!**
+Feel free to open a pull request or issue!
 
 ## Example Code
 
